@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard1.3</TargetFramework>
+        <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <PackageReference Include="SharpGen.Runtime" Version="1.2.1" />
+      <PackageReference Include="SharpGenTools.Sdk" Version="1.2.1" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <SharpGenMapping Include="Mapping.xml">
+          <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+        </SharpGenMapping>
+    </ItemGroup>
+
+</Project>

@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<config id="Mapping" xmlns="urn:SharpGen.Config">
+    <assembly>DuckDb.Bindings.Generator</assembly>
+    <namespace>DuckDb.Bindings.Generator</namespace>
+    <depends>SharpGen.Runtime</depends>
+
+    <sdk name="StdLib" />
+    <sdk name="WindowsSdk" version="10.0" />
+    
+    <include-dir
+            override="true">$(THIS_CONFIG_PATH)</include-dir>
+    
+    <include
+            file="duckdb.h"
+            namespace="DuckDb.Bindings.Generator"
+            attach="true">
+<!--        <attach>duckdb_open</attach>-->
+    </include>
+
+    <extension>
+        <create class="DuckDb.Bindings.Generator.Functions" visibility="public static" />
+    </extension>
+    
+    <mapping>
+        <map function="duckdb_open" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_close" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_query" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_connect" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_disconnect" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_destroy_result" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_column_name" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_boolean" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_int8" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_int16" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_int32" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_int64" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_float" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_double" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_value_varchar" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_prepare" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_nparams" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_boolean" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_int8" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_int16" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_int32" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_int64" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_float" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_double" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_varchar" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_bind_null" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_execute_prepared" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+        <map function="duckdb_destroy_prepare" group="DuckDb.Bindings.Generator.Functions" dll='"duckdb.dll"' />
+    </mapping>
+</config>

@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+    <PropertyGroup>
+        <TargetFramework>netstandard2.0</TargetFramework>
+    </PropertyGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\DuckDb.Bindings\DuckDb.Bindings.csproj" />
+      <ProjectReference Include="..\DuckDb.Data\DuckDb.Data.csproj" />
+      <ProjectReference Include="..\DuckDb.Native\DuckDb.Native.csproj" />
+    </ItemGroup>
+
+</Project>
